@@ -1,2 +1,2 @@
-# Embedded-Linux
-This for tasks for ITI - Android Automotive track
+# For C++ tasks and Labs
+This for tasks for ITI - Android Automotive track 
