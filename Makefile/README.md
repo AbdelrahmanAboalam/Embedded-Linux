@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-# For ITI tasks and Labs 
-This for tasks for ITI - Android Automotive track 
-
-=======
 # How to use Makefile
  It helps you to make compiling your project with simple commands.
  
@@ -20,4 +15,3 @@ This for tasks for ITI - Android Automotive track
  
  - You will see your output of object files.o in bin directory
  - You will see your output file .out in build directory
->>>>>>> MakeFile
