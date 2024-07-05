@@ -29,8 +29,8 @@ Q6- to rename file ------> mv mv mypasswd oldpasswd
 
 Q7-  1-cd ~
      2- cd
-     3- cd /home/youssef
-     4- cd ../../home/youssef
+     3- cd /home/aboalam
+     4- cd ../../home/aboalam
      
 Q8-  ls /usr/bin/w*
 
