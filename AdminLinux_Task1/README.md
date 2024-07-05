@@ -1,6 +1,6 @@
 # Hello
 
-Q1-The thee Linux Distributions: 1-ubuntu /n
+Q1-The thee Linux Distributions: 1-ubuntu
 				 2-kali
 				3-readhat
 Q2- man command is a help command used for get short reference manuals for individual commands, Apifunctions, concepts (only used with External commands only)
