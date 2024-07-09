@@ -164,6 +164,7 @@ int main()
     std::cout<<"My size is"<<my_vector.size()<<std::endl;
     my_vector.insertMiddle(5);
     my_vector.insertAt(2,4);
+    my_vector.pushback(66);
     std::cout<<"My size is"<<my_vector.size()<<std::endl;
     std::cout<<"My elements is : ";
     my_vector.print();
