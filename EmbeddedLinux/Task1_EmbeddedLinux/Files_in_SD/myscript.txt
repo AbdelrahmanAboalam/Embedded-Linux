@@ -1,0 +1,12 @@
+if mmc dev; then
+    fatload mmc 0:1 0x60002000 zImage
+    fatload mmc 0:1 0x60002500 file.dtp
+elif ping 192.168.100.1; then
+    echo "load from network"
+else
+    echo "No Option"
+fi
+
+setenv loadbootsc no
+saveenv
+
