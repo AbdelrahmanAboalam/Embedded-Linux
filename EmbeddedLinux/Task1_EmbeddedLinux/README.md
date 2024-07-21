@@ -19,10 +19,11 @@ sudo ./script.sh
 ```bash
 ifconfig
 ```
+![ifconfig](https://github.com/user-attachments/assets/1e0c1bd8-09e3-4edb-850c-c946d892813c)
 
 
+- Now we will run U-boot using Qemusudo qemu-system-arm -M vexpress-a9 -m 128M -nographic -net nic -net tap,ifname=tap0,script=no -kernel u-boot -sd ~/Desktop/sdcard/sd.img
 
-- Now we will run U-boot using Qemu
 ```bash
 sudo qemu-system-arm -M vexpress-a9 -m 128M -nographic -net nic -net tap,ifname=tap0,script=no -kernel u-boot -sd ~/Desktop/sdcard/sd.img
 ```
@@ -34,6 +35,7 @@ sudo qemu-system-arm -M vexpress-a9 -m 128M -nographic -net nic -net tap,ifname=
 setenv ipaddr 192.168.100.10
 ```
 - Then we try to ping
-- ```bash
+```bash
 ping 192.168.100.1
 ```
+![ping](https://github.com/user-attachments/assets/149d8101-4913-41af-ae0b-480ff95e98b1)
