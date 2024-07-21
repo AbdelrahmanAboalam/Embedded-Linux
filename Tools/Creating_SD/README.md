@@ -14,7 +14,9 @@ dd if=/dev/zero of=sd.img bs=1M count=1024
 cfdisk sd.img
 ```
 - We will select `dos`
+  
 ![sd1](https://github.com/user-attachments/assets/41d8b88e-af08-48dd-9fcb-7c7cd7099d7a)
+
 - From `new` we will add partition size let say 500M then `primary`
 - From `type` we will select `FAT16` 
 - We will make anther partition and type will be `Linux` as a `ext4`
