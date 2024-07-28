@@ -36,6 +36,11 @@ while true; do
             ;;
     esac
 done
+
+echo "Switching to $ROOTFS..."
+chroot "$ROOTFS"
+
+
 ```
 
 - This script waiting from user 1 or 2 to select which partition will run
