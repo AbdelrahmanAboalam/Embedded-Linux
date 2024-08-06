@@ -8,7 +8,7 @@
 source oe-init-build-env
 bitbake-layers create-layer ../meta-Abdo
 ```
-- You will see your lauer out of poky
+- You will see your layer out of poky
 - under it you will see this
 
 ![Screenshot from 2024-08-07 01-00-52](https://github.com/user-attachments/assets/2230fdd9-0c39-48d7-aed2-c8b18f065962)
