@@ -77,7 +77,7 @@ python __anonymous() {
 }
 ```
 
-- Now we will run our recipe and we will show result
+- Now we will run our recipe and we will see result
 ```bash
 bitbake Aboalam
 ```
