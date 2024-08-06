@@ -1,5 +1,6 @@
 # BuildRoot
 
+- [Installing](https://github.com/Aboalam15/Embedded-Linux/edit/main/EmbeddedLinux/Buildroot/README.md#installing) / [Add Package](https://github.com/Aboalam15/Embedded-Linux/edit/main/EmbeddedLinux/Buildroot/README.md#adding-package-to-buildroot)
 ## Installing
 - Required Library
 ```bash
