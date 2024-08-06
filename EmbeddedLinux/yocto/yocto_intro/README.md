@@ -1,8 +1,8 @@
 # Yocto Intro and Build
 
-- [Installing]() - [Building]()
+- [Installing](https://github.com/Aboalam15/Embedded-Linux/tree/main/EmbeddedLinux/yocto/yocto_intro#installing) - [Building](https://github.com/Aboalam15/Embedded-Linux/tree/main/EmbeddedLinux/yocto/yocto_intro#building)
 
-# Installing
+## Installing
 
 - Required for build
 ```bash
