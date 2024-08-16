@@ -56,6 +56,14 @@ DEPENDS = "cmake"
  ```bash
 inherit cmake
 ```
+- We also want to make dirs to compatable with cmake
+
+ ```bash
+S = "${WORKDIR}/git"
+B = "${WORKDIR}/build"
+D = "${WORKDIR}/image"
+```
+
 - Now we will run cmake in do_configure to create Makefile before compiling stage
 
 ```bash
@@ -63,7 +71,6 @@ do_configure(){
   cmake -S ${S} -B ${B} -DCMAKE_EXE_LINKER_FLAGS="-static" -DCMAKE_SHARED_LINKER_FLAGS="-static"
 }
 ```
-
 5- Now we will compile it and install app in /usr/bin
 
 - Note in recipe we use `oe_runmake` instead of make
@@ -82,5 +89,6 @@ do_install() {
 }
 ```
 
+![Screenshot from 2024-08-16 14-57-57](https://github.com/user-attachments/assets/4a526d89-aa65-45ba-bac1-00717860dc92)
 
 
