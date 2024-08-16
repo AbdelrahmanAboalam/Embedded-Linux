@@ -70,7 +70,7 @@ do_configure(){
 - `B` is the Directory where I want to build my app  
 ```bash
 do_compile() {
-     oe_runmake -C ${B}/myapp
+     oe_runmake -C ${B}
 }
 ```
 - `D` is the distnation of exe files
