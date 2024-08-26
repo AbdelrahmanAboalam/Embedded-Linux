@@ -191,6 +191,8 @@ IMAGE_INSTALL:append = " xserver-xorg xf86-video-fbdev xf86-input-evdev xterm ma
 ## In pakages recipe
 
 - We will add and build our Qt app
+
+
 ![Screenshot from 2024-08-26 21-00-49](https://github.com/user-attachments/assets/29d8cf8f-35f4-4b93-9fc5-09aab7f3fb25)
 
 ```bash
