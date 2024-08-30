@@ -87,7 +87,7 @@ DISTRO_FEATURES ?= "${DISTRO_FEATURES_DEFAULT} ${Aboalam_DEFAULT_DISTRO_FEATURES
 - We will add all our Apps and features that we want to our image
 
 ```bash
-SAMMARY = "Custome Image Sato for RPI 3+b"
+AMMARY = "Custome Image Sato for RPI 3+b"
 DESCRIPTION = "This Image maked by Aboalam"
 
 
@@ -183,10 +183,11 @@ RDEPENDS:${PN} = "\
     ${XSERVER} \
     ${XSERVERCODECS} \
     "
-IMAGE_FEATURES:append = " \
-    splash \
-"
+
+IMAGE_FEATURES += "splash package-management"
+
 IMAGE_INSTALL:append = " xserver-xorg xf86-video-fbdev xf86-input-evdev xterm matchbox-wm"
+
 ```
 ## In pakages recipe
 
@@ -196,11 +197,13 @@ IMAGE_INSTALL:append = " xserver-xorg xf86-video-fbdev xf86-input-evdev xterm ma
 ![Screenshot from 2024-08-26 21-00-49](https://github.com/user-attachments/assets/29d8cf8f-35f4-4b93-9fc5-09aab7f3fb25)
 
 ```bash
-SAMMARY = "Custome Image Sato for RPI 3+b"
+SUMMARY = "Custome Image Sato for RPI 3+b"
 DESCRIPTION = "This Image maked by Aboalam"
+
 
 LICENSE = "MIT"
 LIC_FILES_CHKSUM = "file://${COREBASE}/meta/files/common-licenses/MIT;md5=0835ade698e0bcf8506ecda2f7b4f302"
+
 
 SRC_URI = "file://main.cpp \
            file://cppsignalsender.cpp \
@@ -211,25 +214,32 @@ SRC_URI = "file://main.cpp \
            file://CPPtoQml.pro.user"
 
 inherit qmake5
-DEPENDS += "qtbase qttools"
+DEPENDS += "qtbase qttools qtdeclarative"
 
 S = "${WORKDIR}"
+B = "${WORKDIR}/build"
 
 #QT configuration
 IMAGE_INSTALL:append = " make cmake"
-IMAGE_INSTALL:append = " qtbase-tools qtbase qtdeclarative qtimageformats qtmultimedia qtquickcontrols2 qtquickcontrols qtbase-plugins cinematicexperience liberation-fonts qtbase-dev curl wget userland >
+IMAGE_INSTALL:append = " qtbase-tools qtbase qtdeclarative qtimageformats qtmultimedia qtquickcontrols2 qtquickcontrols qtbase-plugins cinematicexperience liberation-fonts qtbase-dev curl wget userland gstreamer1.0-plugins-bad qtsvg"
 DISTRO_FEATURES:append = " x11 opengl wayland"
 PACKAGECONFIG_FONTS:pn-qtbase = " fontconfig"
 
+do_configure() {
+    mkdir -p ${B}
+    cd ${B}
+    qmake ${S}
+}
+
 do_compile() {
-    oe_runmake -C ${B}
+    cd ${B}
+    oe_runmake
 }
 
 do_install() {
     install -d ${D}${bindir}
-    install -m 0755 ${B}/rbpiqt ${D}${bindir}
+    install -m 0755 ${B}/CPPtoQml ${D}${bindir}
 }
-
 FILES_${PN} += "${bindir}/rbpiqt"
 ```
 - In folder files we will add our src files of our project
@@ -252,6 +262,8 @@ LIC_FILES_CHKSUM = "file://${COREBASE}/meta/files/common-licenses/MIT;md5=0835ad
 
 
 inherit core-image
+
+IMAGE_INSTALL += "packages "
 
 TOOLCHAIN_HOST_TASK:append = " nativesdk-intltool nativesdk-glib-2.0"
 TOOLCHAIN_HOST_TASK:remove:task-populate-sdk-ext = " nativesdk-intltool nativesdk-glib-2.0"
@@ -278,6 +290,11 @@ ls | grep sdimg
 
 ![Screenshot from 2024-08-26 21-07-26](https://github.com/user-attachments/assets/dfeb840d-625c-4ab3-82c0-9e2cb95fa986)
 
+- Now Our Image ready to run
+
+ ```bash
+bitbake -k aboalam-image
+```
 
 - Now we will add our Image to SD card
 
