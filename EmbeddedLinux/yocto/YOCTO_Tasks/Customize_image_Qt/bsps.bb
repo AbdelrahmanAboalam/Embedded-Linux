@@ -95,9 +95,8 @@ RDEPENDS:${PN} = "\
     ${XSERVERCODECS} \
     "
 
-IMAGE_FEATURES:append = " \
-    splash \
-"
+IMAGE_FEATURES += "splash package-management"
+
 IMAGE_INSTALL:append = " xserver-xorg xf86-video-fbdev xf86-input-evdev xterm matchbox-wm"
 
-IMAGE_FSTYPES = "tar.bz2 ext4 rpi-sdimg"
+# IMAGE_FSTYPES = "tar.bz2 ext4 rpi-sdimg"

@@ -12,6 +12,8 @@ LIC_FILES_CHKSUM = "file://${COREBASE}/meta/files/common-licenses/MIT;md5=0835ad
 
 inherit core-image
 
+IMAGE_INSTALL += "packages "
+
 TOOLCHAIN_HOST_TASK:append = " nativesdk-intltool nativesdk-glib-2.0"
 TOOLCHAIN_HOST_TASK:remove:task-populate-sdk-ext = " nativesdk-intltool nativesdk-glib-2.0"
 

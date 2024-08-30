@@ -1,4 +1,4 @@
-SAMMARY = "Custome Image Sato for RPI 3+b"
+SUMMARY = "Custome Image Sato for RPI 3+b"
 DESCRIPTION = "This Image maked by Aboalam"
 
 
@@ -15,9 +15,10 @@ SRC_URI = "file://main.cpp \
            file://CPPtoQml.pro.user"
 
 inherit qmake5
-DEPENDS += "qtbase qttools"
+DEPENDS += "qtbase qttools qtdeclarative"
 
 S = "${WORKDIR}"
+B = "${WORKDIR}/build"
 
 #QT configuration
 IMAGE_INSTALL:append = " make cmake"
@@ -25,15 +26,20 @@ IMAGE_INSTALL:append = " qtbase-tools qtbase qtdeclarative qtimageformats qtmult
 DISTRO_FEATURES:append = " x11 opengl wayland"
 PACKAGECONFIG_FONTS:pn-qtbase = " fontconfig"
 
+do_configure() {
+    mkdir -p ${B}
+    cd ${B}
+    qmake ${S}
+}
 
 do_compile() {
-    oe_runmake -C ${B}
-
+    cd ${B}
+    oe_runmake
 }
 
 do_install() {
     install -d ${D}${bindir}
-    install -m 0755 ${B}/rbpiqt ${D}${bindir}
+    install -m 0755 ${B}/CPPtoQml ${D}${bindir}
 }
 
-FILES_${PN} += "${bindir}/rbpiqt"
+#FILES_${PN} += "${bindir}/CPPtoQml"

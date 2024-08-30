@@ -1,7 +1,6 @@
 #include <QGuiApplication>
 #include <QQmlApplicationEngine>
 #include <cppsignalsender.h>
-#include <cppsignalreciver.h>
 #include<QQmlContext>
 
 int main(int argc, char *argv[]) {

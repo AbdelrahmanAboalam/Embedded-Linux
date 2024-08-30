@@ -12,7 +12,7 @@ Window {
         width: 100
         height: 100
         fillMode: Image.PreserveAspectFit
-        source: "file:///home/aboalam/CPPtoQml/images.png"
+        source: "file:///home/aboalam/yocto/meta-Aboalam/recipes-packages/packages/files/images.png"
 
     }
 
