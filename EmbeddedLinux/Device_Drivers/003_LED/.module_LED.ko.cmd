@@ -1,0 +1,1 @@
+cmd_/home/aboalam/Desktop/Drivers/003_LED/module_LED.ko := ld -r  -m elf_x86_64 -z noexecstack   --build-id=sha1  -T scripts/module.lds -o /home/aboalam/Desktop/Drivers/003_LED/module_LED.ko /home/aboalam/Desktop/Drivers/003_LED/module_LED.o /home/aboalam/Desktop/Drivers/003_LED/module_LED.mod.o;  true

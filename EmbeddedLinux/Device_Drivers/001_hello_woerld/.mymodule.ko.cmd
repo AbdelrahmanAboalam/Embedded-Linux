@@ -1,0 +1,1 @@
+cmd_/home/aboalam/Desktop/Drivers/001_hello_woerld/mymodule.ko := ld -r  -m elf_x86_64 -z noexecstack   --build-id=sha1  -T scripts/module.lds -o /home/aboalam/Desktop/Drivers/001_hello_woerld/mymodule.ko /home/aboalam/Desktop/Drivers/001_hello_woerld/mymodule.o /home/aboalam/Desktop/Drivers/001_hello_woerld/mymodule.mod.o;  true

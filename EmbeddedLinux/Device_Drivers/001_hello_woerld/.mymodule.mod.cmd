@@ -1,0 +1,1 @@
+cmd_/home/aboalam/Desktop/Drivers/001_hello_woerld/mymodule.mod := { echo  /home/aboalam/Desktop/Drivers/001_hello_woerld/mymodule.o;  echo; } > /home/aboalam/Desktop/Drivers/001_hello_woerld/mymodule.mod

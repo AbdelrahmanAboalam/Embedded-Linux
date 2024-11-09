@@ -1,0 +1,1 @@
+cmd_/home/aboalam/Desktop/Drivers/003_LED/modules.order := {   echo /home/aboalam/Desktop/Drivers/003_LED/module_LED.ko;   echo /home/aboalam/Desktop/Drivers/003_LED/device1.ko;   echo /home/aboalam/Desktop/Drivers/003_LED/device2.ko; :; } | awk '!x[$$0]++' - > /home/aboalam/Desktop/Drivers/003_LED/modules.order
